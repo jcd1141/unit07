@@ -4,12 +4,12 @@
 let score: number = 0;
 
 function runPlay(yards: number): Promise<void> {
-    return new Promise((resolve) => {
-        setTimeout(() => {
+    return new Promise((resolve) => { //makes a promise
+        setTimeout(() => { //Waits one second
             console.log("Gained " + yards + " yards");
 
             if (yards >= 10) {
-                score = score + 7;
+                score = score + 7; //TD points
                 console.log("Touchdown!");
             }
 
@@ -18,7 +18,7 @@ function runPlay(yards: number): Promise<void> {
     });
 }
 
-async function playGame(): Promise<void> {
+async function playGame(): Promise<void> { //asynchronously runs game
     console.log("Game started!");
 
     await runPlay(5);
