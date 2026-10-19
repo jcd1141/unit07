@@ -2,12 +2,12 @@
 //Joshua Dalton
 
 function getPlayer(): Promise<string> {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => { //create promise
         let player: string = "Drake Maye";
 
-        setTimeout(() => {
+        setTimeout(() => { //waits one second
             if (player != "") {
-                resolve(player);
+                resolve(player); //returns if player is found
             } else {
                 reject("Player not found");
             }
